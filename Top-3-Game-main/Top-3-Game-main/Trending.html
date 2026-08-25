@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- End Font -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Icon -->
+    <link rel="icon" type="image/jpg" href="../Image/logo/logo-inmed.jpg" />
+    <!-- End Icon -->
+
+    <link rel="stylesheet" href="css/styleTrending.css" />
+    <title>Trending</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" id="navbar">
+        <div class="logo">
+          <h3>TOP 3 GAME HUB</h3>
+        </div>
+        <ul id="navLinks">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Trending.html" class="active">Trending</a></li>
+          <li><a href="list.html">List</a></li>
+          <li><a href="genre.html">Genres</a></li>
+          <li><a href="About.html">About</a></li>
+        </ul>
+        <div class="nav-right">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          </button>
+          <div class="search-bar">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              type="text"
+              id="input-box"
+              placeholder="Search Games..."
+              autocomplete="off"
+            />
+            <div class="result-box"></div>
+          </div>
+        </div>
+      </nav>
+      <script src="js/searchbar.js"></script>
+    </header>
+
+    <main class="trending-main">
+      <!-- ── SECTION HEADER ──────────────────────────────── -->
+      <div class="trending-header">
+        <div class="trending-header-left">
+          <div class="live-badge">
+            <span class="dot"></span>
+            Live Statistics
+          </div>
+          <h1 class="trending-title">Trending Now</h1>
+        </div>
+        <div class="time-tabs">
+          <button class="time-tab active" data-tab="daily">Daily</button>
+          <button class="time-tab" data-tab="weekly">Weekly</button>
+          <button class="time-tab" data-tab="monthly">Monthly</button>
+        </div>
+      </div>
+
+      <div class="hero-grid" id="hero-grid"></div>
+
+      <div class="small-grid" id="small-grid"></div>
+
+      <section class="challengers-section">
+        <div class="section-header-line">
+          <h2 class="section-heading">Challengers</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="challenger-list" id="challenger-list"></div>
+      </section>
+
+      <div class="see-all-wrap">
+        <p class="see-all-desc">
+          Discover hundreds more titles climbing the charts. Our algorithm
+          updates every hour to reflect the most engaged communities.
+        </p>
+        <button class="btn-see-all" id="btn-see-all" type="button">See All Challengers →</button>
+      </div>
+
+      <!-- ── NEWSLETTER ─────────────────────────────────────── -->
+      <section class="newsletter-section">
+        <div class="nl-content">
+          <h2 class="nl-title">Stay in the Loop</h2>
+          <p class="nl-desc">
+            Get notified when new games hit the top 3 and receive exclusive
+            early access codes for upcoming beta tests.
+          </p>
+          <div class="nl-form">
+            <input
+              class="nl-input"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <button class="btn-join">Join Now</button>
+          </div>
+        </div>
+        <div class="nl-visual">
+          <img src="../Image/logo/logo-inmed.jpg" alt="Gaming setup" />
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2 class="footer-logo">Top 3 Game Hub</h2>
+          <p class="footer-desc">
+            The definitive source for discovering elite gaming titles across all
+            universes. Engineered for competitive precision.
+          </p>
+          <div class="footer-social">
+            <button class="social-btn" aria-label="Website">
+              <i class="fa-solid fa-globe"></i>
+            </button>
+            <button class="social-btn" aria-label="Discord">
+              <i class="fa-brands fa-discord"></i>
+            </button>
+            <button class="social-btn" aria-label="Email">
+              <i class="fa-regular fa-envelope"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Resources</p>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Protocol</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Ecosystem</p>
+          <ul>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Developers</a></li>
+            <li><a href="#">API Access</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Team Protocol</p>
+          <div class="footer-ops">
+            <p class="ops-label">Operatives:</p>
+            <p class="ops-name">Core Engine Squad 7</p>
+            <div class="ops-tags">
+              <span>Alpha</span>
+              <span class="sep">//</span>
+              <span>Beta</span>
+              <span class="sep">//</span>
+              <span>Gamma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Top 3 Game Hub. Engineered for Elite Gaming.</p>
+      </div>
+    </footer>
+
+    <script src="js/ListGameAll.js"></script>
+    <script>
+      const timeKeyMap = {
+        daily: "peakPlayNow",
+        weekly: "peakPlayWeek",
+        monthly: "peakPlayers"
+      };
+
+      const heroGrid = document.getElementById("hero-grid");
+      const smallGrid = document.getElementById("small-grid");
+      const challengerList = document.getElementById("challenger-list");
+      const toggleBtn = document.getElementById("btn-see-all");
+
+      let showAllChallengers = false;
+
+      function parseNumber(value) {
+        const raw = String(value ?? "0").replace(/[^0-9.]/g, "").replace(/\.(?=\d{3}(?:\.|$))/g, "");
+        return Number(raw || 0);
+      }
+
+      function getSortedGames(mode) {
+        const catalog = Array.isArray(window.ListGameAll) ? window.ListGameAll : [];
+        const key = timeKeyMap[mode] || "peakPlayNow";
+
+        return [...catalog].sort((a, b) => parseNumber(b[key]) - parseNumber(a[key]));
+      }
+
+      function resolveDetailUrl(game) {
+        const slug = game && (game.slug || game.name);
+        return `Games/detail.html?game=${encodeURIComponent(String(slug).trim())}`;
+      }
+
+      function buildButton(label, game, className) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = className;
+        button.textContent = label;
+        button.addEventListener("click", () => {
+          window.location.href = resolveDetailUrl(game);
+        });
+        return button;
+      }
+
+      function renderHeroCards(games) {
+        if (!heroGrid) return;
+
+        heroGrid.innerHTML = games
+          .map((game, index) => {
+            const cover = window.resolveGameCoverPath ? window.resolveGameCoverPath(game.cover) : game.cover;
+            const rank = String(index + 1).padStart(2, "0");
+            const rankClass = index === 0 ? "rank-1" : "rank-2";
+
+            return `
+              <div class="hero-card" data-slug="${game.slug || game.name}">
+                <div class="hero-thumb">
+                  <img src="${cover}" alt="${game.name}" />
+                  <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-rank ${rankClass}">${rank}</div>
+                <div class="hero-badges">
+                  <span class="badge badge-genre">${game.genre}</span>
+                  <span class="badge badge-live">
+                    <span class="badge-dot"></span>Live Event
+                  </span>
+                </div>
+                <div class="hero-info">
+                  <div class="hero-meta">
+                    <h2 class="hero-title">${game.name}</h2>
+                    <div class="hero-stats">
+                      <span class="star-rating"><i class="fa-solid fa-star"></i> ${game.rating || "4.0/5"}</span>
+                      <span class="stat-icon"><i class="fa-regular fa-comment"></i></span>
+                      <span class="stat-icon"><i class="fa-solid fa-gamepad"></i></span>
+                    </div>
+                  </div>
+                  ${buildButtonHtml("Detail", game, "btn-play")}
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+
+        heroGrid.querySelectorAll(".hero-card").forEach((card) => {
+          card.addEventListener("click", (event) => {
+            if (event.target.closest("button")) return;
+            const slug = card.dataset.slug;
+            const target = getSortedGames(currentMode).find((game) => (game.slug || game.name) === slug);
+            if (target) window.location.href = resolveDetailUrl(target);
+          });
+        });
+
+        heroGrid.querySelectorAll(".btn-play").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const slug = button.dataset.slug;
+            const target = getSortedGames(currentMode).find((game) => (game.slug || game.name) === slug);
+            if (target) window.location.href = resolveDetailUrl(target);
+          });
+        });
+      }
+
+      function buildButtonHtml(label, game, className) {
+        return `<button class="${className}" type="button" data-slug="${game.slug || game.name}">${label}</button>`;
+      }
+
+      function renderSmallCards(games) {
+        if (!smallGrid) return;
+
+        smallGrid.innerHTML = games
+          .map((game, index) => {
+            const cover = window.resolveGameCoverPath ? window.resolveGameCoverPath(game.cover) : game.cover;
+            const rank = String(index + 3).padStart(2, "0");
+
+            return `
+              <div class="small-card" data-slug="${game.slug || game.name}">
+                <div class="small-thumb">
+                  <img src="${cover}" alt="${game.name}" />
+                  <span class="small-rank">${rank}</span>
+                  <span class="small-rating"><i class="fa-solid fa-star"></i> ${game.rating || "4.0/5"}</span>
+                </div>
+                <div class="small-body">
+                  <h3 class="small-title">${game.name}</h3>
+                  <div class="small-footer">
+                    <div class="small-icons">
+                      <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    ${buildButtonHtml("Detail", game, "btn-view")}
+                  </div>
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+
+        smallGrid.querySelectorAll(".small-card").forEach((card) => {
+          card.addEventListener("click", (event) => {
+            if (event.target.closest("button")) return;
+            const slug = card.dataset.slug;
+            const target = getSortedGames(currentMode).find((game) => (game.slug || game.name) === slug);
+            if (target) window.location.href = resolveDetailUrl(target);
+          });
+        });
+
+        smallGrid.querySelectorAll("button.btn-view").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const slug = button.dataset.slug;
+            const target = getSortedGames(currentMode).find((game) => (game.slug || game.name) === slug);
+            if (target) window.location.href = resolveDetailUrl(target);
+          });
+        });
+      }
+
+      function renderChallengers(games) {
+        if (!challengerList) return;
+
+        const visibleGames = showAllChallengers ? games.slice(5) : games.slice(5, 10);
+
+        challengerList.innerHTML = visibleGames
+          .map((game, index) => {
+            const realIndex = 5 + index;
+            const metric = currentMode === "daily" ? game.peakPlayNow : currentMode === "weekly" ? game.peakPlayWeek : game.peakPlayers;
+            const cover = window.resolveGameCoverPath ? window.resolveGameCoverPath(game.cover) : game.cover;
+            return `
+              <div class="challenger-row" data-slug="${game.slug || game.name}">
+                <span class="ch-num">${String(realIndex + 1).padStart(2, "0")}</span>
+                <img class="ch-thumb" src="${cover}" alt="${game.name}" />
+                <div class="ch-info">
+                  <p class="ch-name">${game.name}</p>
+                  <p class="ch-sub">${game.genre} · <span>${metric}</span></p>
+                </div>
+                <div class="ch-right">
+                  <span class="ch-rating"><i class="fa-solid fa-star"></i> ${game.rating || "4.0/5"}</span>
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+
+        challengerList.querySelectorAll(".challenger-row").forEach((row) => {
+          row.addEventListener("click", () => {
+            const slug = row.dataset.slug;
+            const target = getSortedGames(currentMode).find((game) => (game.slug || game.name) === slug);
+            if (target) window.location.href = resolveDetailUrl(target);
+          });
+        });
+      }
+
+      let currentMode = "daily";
+
+      function renderTrending() {
+        const sortedGames = getSortedGames(currentMode);
+        const topGames = sortedGames.slice(0, 6);
+
+        renderHeroCards(topGames.slice(0, 2));
+        renderSmallCards(topGames.slice(2, 6));
+        renderChallengers(sortedGames);
+
+        if (toggleBtn) {
+          const totalChallengers = Math.max(0, sortedGames.length - 5);
+
+          if (totalChallengers <= 5) {
+            toggleBtn.textContent = "No More Challengers";
+            toggleBtn.disabled = true;
+            toggleBtn.style.opacity = "0.6";
+            toggleBtn.style.cursor = "default";
+            return;
+          }
+
+          toggleBtn.textContent = showAllChallengers ? "Close" : "See All Challengers →";
+          toggleBtn.disabled = false;
+          toggleBtn.style.opacity = "1";
+          toggleBtn.style.cursor = "pointer";
+        }
+      }
+
+      document.querySelectorAll(".time-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document.querySelectorAll(".time-tab").forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+          currentMode = tab.dataset.tab || "daily";
+          showAllChallengers = false;
+          renderTrending();
+        });
+      });
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          const totalChallengers = Math.max(0, getSortedGames(currentMode).length - 5);
+          if (totalChallengers <= 5) return;
+          showAllChallengers = !showAllChallengers;
+          renderTrending();
+        });
+      }
+
+      renderTrending();
+    </script>
+  </body>
+</html>

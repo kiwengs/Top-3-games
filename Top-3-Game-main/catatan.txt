@@ -1,0 +1,33 @@
+Kalo mau menambahkan game :
+1. cari wallpaper dulu lalu masukan ke Image/List game pict
+2. lalu ke file ListGameAll.js 
+3. cari kodingan seperti ini const ListGameAll =
+4. nah copy {slug hingga rating}, lalu paste ke code bawah
+5. ubah isi code tersebut seperti yang mau di tambahkan
+6. jika sudah tekan save
+7. cek apakah game berhasil masuk di list (buka explore)\
+
+penjelasan setiap folder :
+Image :
+1. untuk folder menyimpan gambar didalam nya ada facewallpaper, list game pict dan logo
+2. facewallpaper untuk rotasi gambar agar tidak sama terus dibagian muka/home
+3. list game pict adalah thumnail atau cover game yang ingin ditambahkan
+4.j ika ada gambar yang kurang sesusai dengan isi folder tambahin aja folder baru 
+
+top-3-game-main :
+1. 6 file yang ada disitu adalah main navigasi bar jadi file utama untuk index (home-trending-list-genre-about)
+2. lalu ada folder css untuk masalah style tampilan agar ui/ux menarik dan gampang digunakan
+3. folder games = file yang berada di dalam file utama navigasi bar
+4. folder js = sebagai script agar codingan lebih interaktif
+
+
+
+kalo mau ganti facewallpaper (wallpaper utama) :
+1. ke home.html
+2. cari kata kunci wallpaperImages
+3. tambahkan code sesuai dengan gambar yang dibutuhkan
+4. tambahkan wallaper ke Image/facewallpaper
+
+
+kalo masih bingung chat aku aja 
+--kevin
