@@ -376,7 +376,7 @@ const ListGameAll = [
   },
   {
     slug: "Tsubasa",
-    cover: "../Image/list game pict/Tsubasa.jpg",
+    cover: "../Image/list game pict/tsubasa.jpg",
     name: "Tsubasa",
     genre: "Sports",
     bio: "Game sepak bola dengan mekanik arcade, karakter ikonik, dan pertandingan yang cepat dan seru. AYO keluarkan JURUS tendangan kamu yang iconic!",
